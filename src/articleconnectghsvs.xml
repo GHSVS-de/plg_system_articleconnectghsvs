@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="{{type}}" client="{{client}}" group="{{folder}}" method="upgrade">
+	<name>{{nameUpper}}</name>
+	<author>{{authorName}}</author>
+	<creationDate>{{creationDate}}</creationDate>
+	<copyright>{{copyright}}</copyright>
+	<license>{{licenseLong}}</license>
+	<authorUrl>{{authorUrl}}</authorUrl>
+	<version>{{version}}</version>
+	<description>{{nameUpper}}_XML_DESCRIPTION</description>
+
+	<updateservers><server type="extension" priority="1" name="{{nameUpper}}">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/{{name}}-update.xml</server></updateservers>
+
+	<changelogurl>https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/{{name}}-changelog.xml</changelogurl>
+
+	<infourl>https://github.com/GHSVS-de/{{name}}#readme</infourl>
+
+	<downloadUrl>
+	https://github.com/GHSVS-de/{{name}}/raw/{{version}}/dist/{{zipFilename}}
+	</downloadUrl>
+
+	<versionCompare>
+	https://github.com/GHSVS-de/{{name}}/compare/{{versionCompare}}...{{version}}
+	</versionCompare>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<minimumPhp>{{minimumPhp}}</minimumPhp>
+	<maximumPhp>{{maximumPhp}}</maximumPhp>
+	<minimumJoomla>{{minimumJoomla}}</minimumJoomla>
+	<maximumJoomla>{{maximumJoomla}}</maximumJoomla>
+	<allowDowngrades>{{allowDowngrades}}</allowDowngrades>
+
+	<files>
+		<filename plugin="{{filename}}">{{filename}}.php</filename>
+		<filename>LICENSE.txt</filename>
+		<folder>language</folder>
+		<folder>src</folder>
+	</files>
+
+	<config>
+	<fields name="params"
+		addfieldpath="plugins/system/articleconnectghsvs/src/Field">
+
+		<fieldset name="basic">
+
+			<field type="hidden" default="1" name="{{filename}}plugin"/>
+
+			<field name="tableexists"
+				type="PlgSystemArticleConnectGhsvs.tableexist"
+				label="Tabelle schon angelegt?" table="#__articleconnectghsvs" />
+
+			<field name="tableCreateSpacer" type="note"
+				class="alert alert-info"
+				label="PLG_SYSTEM_ARTICLECONNECTGHSVS_TABLECREATE"
+				description="PLG_SYSTEM_ARTICLECONNECTGHSVS_TABLECREATE_DESC"/>
+
+			<field name="tableCreate" type="list" default="1" filter="integer"
+				label="PLG_SYSTEM_ARTICLECONNECTGHSVS_TABLECREATE">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+		</fieldset>
+	</fields>
+	</config>
+
+</extension>

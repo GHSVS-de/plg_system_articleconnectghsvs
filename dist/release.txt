@@ -1,0 +1,16 @@
+2021.12.18
+
+Joomla system plugin plg_system_articleconnectghsvs 2021.12.18
+
+Checksum entities: `&lt;sha256&gt;3908506fe6167e90c37e5ad44d582b69677e1c858097c39268d6bb2980ecc0f4&lt;/sha256&gt;`
+
+- Joomla system plugin. Connect articles ('Cross linking').
+- [Download plg_system_articleconnectghsvs-2021.12.18.zip](https://github.com/GHSVS-de/plg_system_articleconnectghsvs/raw/2021.12.18/dist/plg_system_articleconnectghsvs-2021.12.18.zip)
+- [Compare releases 2019.08.08...2021.12.18](https://github.com/GHSVS-de/plg_system_articleconnectghsvs/compare/2019.08.08...2021.12.18)
+- [Changelogs](https://updates.ghsvs.de/changelog.php?file=plg_system_articleconnectghsvs)
+- Checksum: `<sha256>3908506fe6167e90c37e5ad44d582b69677e1c858097c39268d6bb2980ecc0f4</sha256>`
+- Changelogs XML: https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/plg_system_articleconnectghsvs-changelog.xml
+- Updates XML: https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/plg_system_articleconnectghsvs-update.xml
+- Last tests: PHP 8.0<br>PHP 7.4<br>Joomla 3.10.4
+- Joomla-Target-Platform: 3.*, 4.*
+- Requires: MySql/MariaDb database
