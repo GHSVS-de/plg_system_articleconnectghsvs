@@ -1,5 +1,5 @@
 <?php
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 use Joomla\Registry\Registry;
 JFormHelper::loadFieldClass('list');
 class JFormFieldArticlesGhsvs extends JFormFieldList
@@ -25,28 +25,28 @@ class JFormFieldArticlesGhsvs extends JFormFieldList
     $query = $db->getQuery(true);
 
     $separator = ', ';
-			
+
 			 $table = $db->qn('#__content', 'c');
-			
+
 			 $selects = array('c.state', 'cat.title', 'c.id');
 			 $selects = implode(',', $db->qn($selects));
-			
+
 			 $value = $db->qn('c.id', 'value') . ', c.catid';
-			
+
 			 $text = $query->concatenate(
 				 $db->qn(array('c.title', 'c.id')), $separator
 				) . ' as text';
-			 
+
 				/*$text = $db->qn('c.title') . ' as text';*/
-				
+
 			 $where = $db->qn('c.catid') . ' IN (' . implode(',', $catid) . ')';
-			
+
 			 $query->select($selects)
 			  ->select($value)->select($text)->from($table)
      ->where($where);
-   
+
 			 $query->join('LEFT', $db->qn('#__categories', 'cat').' ON cat.id = c.catid');
-			
+
     $db->setQuery($query);
     if ($options = $db->loadObjectList())
     {
